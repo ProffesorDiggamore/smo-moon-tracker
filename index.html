@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Power Moon Tracker</title>
+  <meta name="description" content="A Super Mario Odyssey Power Moon checklist: every moon in every kingdom, with how to get it and saved progress.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M20 3a13 13 0 1 0 9 22A11 11 0 0 1 20 3z' fill='%23f5c518'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#moon-list">Skip to moons</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <svg class="brand-moon" viewBox="0 0 32 32" aria-hidden="true"><path d="M20 3a13 13 0 1 0 9 22A11 11 0 0 1 20 3z"/></svg>
+        <div>
+          <p class="eyebrow">Super Mario Odyssey</p>
+          <h1>Power Moon Tracker</h1>
+        </div>
+      </div>
+      <div class="overall" aria-live="polite">
+        <p class="overall-count"><strong id="overall-collected">0</strong> / <span id="overall-total">0</span> moons</p>
+        <div class="bar" aria-hidden="true"><span id="overall-bar"></span></div>
+        <p class="overall-sub" id="overall-value"></p>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="wrap toolbar-inner">
+      <label class="search">
+        <span class="visually-hidden">Search moons by name, number (like #12) or hint. Press / to jump here.</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>
+        <input id="search" type="search" placeholder="Search moons…" autocomplete="off" spellcheck="false">
+      </label>
+      <label class="switch">
+        <input id="hide-collected" type="checkbox" role="switch">
+        <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+        <span class="switch-text">Hide collected</span>
+      </label>
+    </div>
+    <nav class="wrap tabs-wrap" aria-label="Kingdoms">
+      <div class="tabs" id="tabs" role="tablist"></div>
+    </nav>
+  </div>
+
+  <main class="wrap" id="main">
+    <section class="kingdom-head" id="kingdom-head" aria-live="polite"></section>
+    <ol class="moon-list" id="moon-list" role="tabpanel" tabindex="-1"></ol>
+    <div class="empty" id="empty" hidden></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap" id="credits">
+      <p>
+        Moon names, numbers, “how to get it” text and unlock notes come from the
+        <a href="https://www.mariowiki.com/Lists_of_Power_Moons" target="_blank" rel="noopener">Super Mario Wiki</a>
+        (<a href="https://www.mariowiki.com/Module:SMO_Power_Moons/data.json" target="_blank" rel="noopener">Power Moon data</a>),
+        written by Super Mario Wiki contributors and used under
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
+        The text was converted from wiki markup to plain text; it is otherwise unchanged.
+        <span id="retrieved"></span>
+      </p>
+      <p>
+        Guide buttons link to <a href="https://www.ign.com/wikis/super-mario-odyssey/Power_Moon_Locations" target="_blank" rel="noopener">IGN’s Super Mario Odyssey guide</a>
+        and YouTube search. This is a fan-made checklist, not affiliated with Nintendo, the Super Mario Wiki, IGN or YouTube.
+        Super Mario Odyssey © Nintendo.
+      </p>
+      <p>Your checkmarks are saved in this browser only.</p>
+    </div>
+  </footer>
+
+  <script src="data/moons.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
